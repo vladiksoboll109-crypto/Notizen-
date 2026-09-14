@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лавандовый календарь</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Мерцающие огоньки на фоне -->
+  <div class="bokeh b1"></div>
+  <div class="bokeh b2"></div>
+  <div class="bokeh b3"></div>
+
+  <div class="planner-wrapper">
+
+    <!-- Верхняя часть с цитатой и фото -->
+    <header class="planner-header">
+      <div class="quote-card note-card">
+        <p class="handwriting">Каждый день — это маленькая жизнь. Наполни её теплом и лавандовым светом ✨</p>
+      </div>
+
+      <div class="title-block">
+        <span class="heart-icon">💜</span>
+        <h1>КАЛЕНДАРЬ</h1>
+        <div class="divider">
+          <span>✧ СЕНТЯБРЬ ✧</span>
+        </div>
+      </div>
+
+      <div class="polaroid">
+        <div class="polaroid-pin"></div>
+        <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?auto=format&fit=crop&w=400&q=80" alt="Лаванда">
+      </div>
+    </header>
+
+    <!-- Сетка дней недели -->
+    <div class="weekdays-grid">
+      <div>ПН</div><div>ВТ</div><div>СР</div><div>ЧТ</div><div>ПТ</div><div>СБ</div><div>ВС</div>
+    </div>
+
+    <!-- 35 интерактивных ячеек календаря -->
+    <main class="calendar-grid" id="calendarGrid"></main>
+
+    <!-- Нижняя часть с блоками для записей -->
+    <footer class="planner-footer">
+      <div class="note-card bottom-card">
+        <h3>Заметки месяца ♡</h3>
+        <textarea id="mainNotes" placeholder="Нажмите, чтобы записать важные мысли..."></textarea>
+      </div>
+
+      <div class="quote-card bottom-card motivation">
+        <p class="handwriting">Ты можешь всё!<br>Просто начни ✨</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Модальное окно для быстрой записи на день -->
+  <div class="modal" id="noteModal">
+    <div class="modal-content">
+      <h4 id="modalDateTitle">День</h4>
+      <textarea id="modalTextInput" placeholder="Напишите планы или заметку..."></textarea>
+      <div class="modal-actions">
+        <button id="closeModalBtn" class="btn-cancel">Отмена</button>
+        <button id="saveModalBtn" class="btn-save">Сохранить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
